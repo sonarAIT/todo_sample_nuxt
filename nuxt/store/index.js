@@ -24,6 +24,8 @@ export const state = () => ({
       labelText: 'none',
     },
   ],
+  NowFilter: 0,
+  FilterFlag: false,
 })
 
 export const mutations = {
@@ -32,6 +34,12 @@ export const mutations = {
   },
   setLabels(state, labelTexts) {
     state.labels = labelTexts
+  },
+  setNowFilter(state, nowFilter) {
+    state.NowFilter = nowFilter
+  },
+  setFilterFlag(state, FilterFlag) {
+    state.FilterFlag = FilterFlag
   },
   addTask(state, task) {
     state.tasks.push(task)

@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12">
+  <v-col cols="6">
     <v-card>
       <v-card-title class="justify-center"
         >{{ task.id }}: {{ task.name }}</v-card-title
@@ -21,12 +21,15 @@
 <script>
 export default {
   name: 'Task',
+
   props: ['task'],
+
   methods: {
     complete: function () {
       this.$store.dispatch('completeTask', this.task.id)
     },
   },
+
   computed: {
     labels: function () {
       return this.$store.state.labels

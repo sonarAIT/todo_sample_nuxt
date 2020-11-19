@@ -1,6 +1,6 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="10">
+  <v-row>
+    <v-col cols="12">
       <v-card>
         <v-card-title> タスクの作成 </v-card-title>
         <v-card-text>
@@ -9,6 +9,8 @@
               <v-col cols="12">
                 <v-text-field label="name" v-model="name"></v-text-field>
               </v-col>
+            </v-row>
+            <v-row>
               <v-col cols="12">
                 <v-textarea
                   outlined
@@ -18,6 +20,8 @@
                 >
                 </v-textarea>
               </v-col>
+            </v-row>
+            <v-row>
               <v-col cols="4">
                 <v-select
                   v-model="label"
@@ -45,11 +49,13 @@
 <script>
 export default {
   name: 'TaskForm',
+
   data: () => ({
     name: '',
     description: '',
     label: 0,
   }),
+
   methods: {
     submit: function () {
       let date = new Date()
@@ -76,6 +82,7 @@ export default {
       this.$store.dispatch('addTask', task)
     },
   },
+
   computed: {
     labels: function () {
       return this.$store.state.labels

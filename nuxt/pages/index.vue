@@ -1,22 +1,21 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12">
-      <TaskForm />
-    </v-col>
-    <v-col cols="12">
-      <Tasks />
-    </v-col>
-  </v-row>
+  <v-container>
+    <TaskForm />
+    <TodoFilter />
+    <Tasks />
+  </v-container>
 </template>
 
 <script>
 import TaskForm from '../components/TaskForm.vue'
 import Tasks from '../components/Tasks.vue'
+import TodoFilter from '../components/TodoFilter.vue'
 
 export default {
   components: {
     TaskForm,
     Tasks,
+    TodoFilter,
   },
 
   created() {
