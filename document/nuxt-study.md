@@ -99,7 +99,7 @@ v-card に関する詳しい説明は<a href="https://v2.vuetifyjs.com/ja/compon
 
 ![grip-image](images/grid-image.png)
 
-v-container が全ての親，v-row が行．v-col が列である．
+v-container が全ての親，v-row が行．v-col が列である．(つまり，黄色が全ての親で，赤が行，青が列である．)
 
 まず全体が v-container に包まれていて，タスク登録フォームの行，フィルタの行，タスクの行という 3 つの巨大な行が存在している．
 
@@ -111,11 +111,11 @@ v-container が全ての親，v-row が行．v-col が列である．
 
 ### v-row
 
-行ひとつ分．この中に v-col を好きなだけ入れていく．
+行ひとつ分．この中に v-col(列) を好きなだけ入れていく．
 
 justify="center" align="center"という設定項目を設定している v-row がある．
 
-justify は，横方向についてどう並べるか決める．
+justify は，列を横方向についてどう並べるか決める．
 
 `justify="start"`
 ![justify-1](images/justify-1.png)
